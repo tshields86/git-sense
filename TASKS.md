@@ -53,7 +53,7 @@ Work through these tasks in order. Check off each task as you complete it. Commi
 
 ## Phase 3: Auth & Config Commands
 
-- [ ] **3.1 Implement OAuth device flow** (`src/commands/auth.ts`)
+- [x] **3.1 Implement OAuth device flow** (`src/commands/auth.ts`)
   - Start device authorization request to GitHub
   - Display URL and user code to terminal
   - Poll for token with appropriate interval
@@ -61,17 +61,17 @@ Work through these tasks in order. Check off each task as you complete it. Commi
   - Display success with authenticated username
   - Handle errors (expired code, denied access, etc.)
 
-- [ ] **3.2 Add auth command to CLI**
+- [x] **3.2 Add auth command to CLI**
   - Register command in src/index.ts
   - Test full flow with real GitHub account
 
-- [ ] **3.3 Implement config command** (`src/commands/config.ts`)
+- [x] **3.3 Implement config command** (`src/commands/config.ts`)
   - `git-sense config --anthropic-key <key>` - Store Anthropic API key
   - `git-sense config --show` - Show current config (mask sensitive values)
   - `git-sense config --clear` - Clear all stored config
   - Register command in src/index.ts
 
-- [ ] **3.4 Implement interactive API key prompt**
+- [x] **3.4 Implement interactive API key prompt**
   - Create promptForAnthropicKey() helper using Node's readline
   - Shows link to https://console.anthropic.com/api-keys
   - Validates key format (starts with sk-ant-)

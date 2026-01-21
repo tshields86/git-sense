@@ -1,6 +1,7 @@
 import { Command } from 'commander';
 import { authCommand } from './commands/auth.js';
 import { configCommand } from './commands/config.js';
+import { summaryCommand } from './commands/summary.js';
 
 const program = new Command();
 
@@ -28,9 +29,7 @@ program
   .option('--weeks <n>', 'Last n weeks', '2')
   .option('--months <n>', 'Last n months')
   .option('--all', 'Entire history')
-  .action(() => {
-    console.log('Summary command - not yet implemented');
-  });
+  .action(summaryCommand);
 
 program
   .command('contributors')
