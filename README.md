@@ -13,7 +13,7 @@ AI-powered CLI tool to make sense of git history. Uses Claude to generate summar
 
 - Node.js 18+
 - A GitHub account (for OAuth)
-- An Anthropic API key ([get one here](https://console.anthropic.com/api-keys))
+- An Anthropic API key ([get one here](https://platform.claude.com/settings/keys))
 
 ## Installation
 

@@ -64,7 +64,7 @@ async function promptForAnthropicKey(): Promise<string> {
   console.log();
   console.log(chalk.yellow('Anthropic API key not found.'));
   console.log();
-  console.log(chalk.blue('→'), `Get your API key at: ${chalk.underline('https://console.anthropic.com/api-keys')}`);
+  console.log(chalk.blue('→'), `Get your API key at: ${chalk.underline('https://platform.claude.com/settings/keys')}`);
 
   return new Promise((resolve, reject) => {
     rl.question(chalk.blue('→') + ' Enter your API key: ', (answer) => {

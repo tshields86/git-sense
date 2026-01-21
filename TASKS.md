@@ -73,7 +73,7 @@ Work through these tasks in order. Check off each task as you complete it. Commi
 
 - [x] **3.4 Implement interactive API key prompt**
   - Create promptForAnthropicKey() helper using Node's readline
-  - Shows link to https://console.anthropic.com/api-keys
+  - Shows link to https://platform.claude.com/settings/keys
   - Validates key format (starts with sk-ant-)
   - Saves key after entry
   - Call this from ensureAnthropicKey() when key is missing

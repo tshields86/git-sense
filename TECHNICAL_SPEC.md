@@ -105,7 +105,7 @@ $ git-sense summary
 
 Anthropic API key not found.
 
-→ Get your API key at: https://console.anthropic.com/api-keys
+→ Get your API key at: https://platform.claude.com/settings/keys
 → Enter your API key: sk-ant-xxxxx
 
 ✓ API key saved.
