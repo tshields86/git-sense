@@ -4,6 +4,7 @@ import { configCommand } from './commands/config.js';
 import { summaryCommand } from './commands/summary.js';
 import { contributorsCommand } from './commands/contributors.js';
 import { askCommand } from './commands/ask.js';
+import { changelogCommand } from './commands/changelog.js';
 
 const program = new Command();
 
@@ -51,8 +52,6 @@ program
   .requiredOption('--from <ref>', 'Starting reference')
   .option('--to <ref>', 'Ending reference', 'HEAD')
   .option('--format <type>', 'Output format (pretty, markdown)', 'pretty')
-  .action(() => {
-    console.log('Changelog command - not yet implemented');
-  });
+  .action(changelogCommand);
 
 program.parse();

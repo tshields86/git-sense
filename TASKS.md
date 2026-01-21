@@ -117,18 +117,18 @@ Work through these tasks in order. Check off each task as you complete it. Commi
 
 ## Phase 6: Ask Command
 
-- [ ] **6.1 Implement ask command** (`src/commands/ask.ts`)
+- [x] **6.1 Implement ask command** (`src/commands/ask.ts`)
   - Accept question as argument
   - Fetch broader history (more data than summary)
   - May need to paginate through more commits/PRs
 
-- [ ] **6.2 Add AI Q&A**
+- [x] **6.2 Add AI Q&A**
   - Create prompt with repo context and question
   - Instruct to cite PRs/commits
   - Instruct to say "not found" if answer isn't in history
   - Stream response
 
-- [ ] **6.3 Register and test**
+- [x] **6.3 Register and test**
   - Add command to CLI
   - Test various question types
   - Verify citations work
