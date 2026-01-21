@@ -409,7 +409,7 @@ The user must register a GitHub OAuth App:
 2. Click "OAuth Apps" → "New OAuth App"
 3. Fill in:
    - Application name: `git-sense` (or anything)
-   - Homepage URL: `https://github.com/yourusername/git-sense`
+   - Homepage URL: `https://github.com/tshields86/git-sense`
    - Authorization callback URL: `http://localhost` (not used for device flow)
 4. Copy the Client ID
 

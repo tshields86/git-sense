@@ -24,7 +24,7 @@ npm install -g git-sense
 Or install from source:
 
 ```bash
-git clone https://github.com/yourusername/git-sense.git
+git clone https://github.com/tshields86/git-sense.git
 cd git-sense
 npm install
 npm run build
@@ -156,7 +156,7 @@ To use the auth command, you need a GitHub OAuth App:
 2. Click "OAuth Apps" → "New OAuth App"
 3. Fill in:
    - Application name: `git-sense`
-   - Homepage URL: `https://github.com/yourusername/git-sense`
+   - Homepage URL: `https://github.com/tshields86/git-sense`
    - Authorization callback URL: `http://localhost`
 4. Copy the Client ID and update `src/commands/auth.ts`
 
