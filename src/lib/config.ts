@@ -1,4 +1,6 @@
 import Conf from 'conf';
+import * as readline from 'readline';
+import chalk from 'chalk';
 
 interface ConfigSchema {
   githubToken?: string;
@@ -49,12 +51,51 @@ export function getConfigPath(): string {
   return config.path;
 }
 
-// Placeholder for interactive prompt - will be implemented in Task 3.4
+function validateAnthropicKeyFormat(key: string): boolean {
+  return key.startsWith('sk-ant-');
+}
+
+async function promptForAnthropicKey(): Promise<string> {
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+  });
+
+  console.log();
+  console.log(chalk.yellow('Anthropic API key not found.'));
+  console.log();
+  console.log(chalk.blue('→'), `Get your API key at: ${chalk.underline('https://console.anthropic.com/api-keys')}`);
+
+  return new Promise((resolve, reject) => {
+    rl.question(chalk.blue('→') + ' Enter your API key: ', (answer) => {
+      rl.close();
+
+      const key = answer.trim();
+
+      if (!key) {
+        reject(new Error('No API key provided.'));
+        return;
+      }
+
+      if (!validateAnthropicKeyFormat(key)) {
+        reject(new Error('Invalid API key format. Key should start with \'sk-ant-\'.'));
+        return;
+      }
+
+      setAnthropicKey(key);
+      console.log(chalk.green('✓'), 'API key saved.');
+      console.log();
+      resolve(key);
+    });
+  });
+}
+
 export async function ensureAnthropicKey(): Promise<string> {
   const key = getAnthropicKey();
   if (key) {
     return key;
   }
-  // This will be replaced with interactive prompt in Task 3.4
-  throw new Error('Anthropic API key not found. Run "git-sense config --anthropic-key <key>" to set it.');
+
+  // Interactive prompt for API key
+  return promptForAnthropicKey();
 }
