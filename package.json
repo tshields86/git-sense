@@ -7,21 +7,35 @@
   "bin": {
     "git-sense": "./dist/index.js"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "tsx src/index.ts",
     "build": "tsup",
     "start": "node dist/index.js",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "git",
     "ai",
     "cli",
     "changelog",
-    "summary"
+    "summary",
+    "claude",
+    "anthropic",
+    "github"
   ],
-  "author": "",
-  "license": "MIT",
+  "author": "tshields86",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tshields86/git-sense.git"
+  },
+  "homepage": "https://github.com/tshields86/git-sense#readme",
+  "bugs": {
+    "url": "https://github.com/tshields86/git-sense/issues"
+  },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0",
     "@octokit/rest": "^21.0.0",
