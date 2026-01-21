@@ -2,8 +2,7 @@ import { setGitHubToken } from '../lib/config.js';
 import { getAuthenticatedUser } from '../lib/github.js';
 import * as fmt from '../lib/format.js';
 
-// Replace with your GitHub OAuth App Client ID
-const GITHUB_CLIENT_ID = 'YOUR_GITHUB_CLIENT_ID';
+const GITHUB_CLIENT_ID = 'Ov23livD27sKp8K0qGOL';
 
 interface DeviceCodeResponse {
   device_code: string;

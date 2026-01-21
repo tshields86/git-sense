@@ -148,18 +148,6 @@ Configuration is stored using the `conf` package:
 - Linux: `~/.config/git-sense-nodejs/config.json`
 - Windows: `%APPDATA%/git-sense-nodejs/config.json`
 
-## GitHub OAuth App Setup
-
-To use the auth command, you need a GitHub OAuth App:
-
-1. Go to https://github.com/settings/developers
-2. Click "OAuth Apps" → "New OAuth App"
-3. Fill in:
-   - Application name: `git-sense`
-   - Homepage URL: `https://github.com/tshields86/git-sense`
-   - Authorization callback URL: `http://localhost`
-4. Copy the Client ID and update `src/commands/auth.ts`
-
 ## Development
 
 ```bash
