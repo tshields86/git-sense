@@ -3,6 +3,7 @@ import { authCommand } from './commands/auth.js';
 import { configCommand } from './commands/config.js';
 import { summaryCommand } from './commands/summary.js';
 import { contributorsCommand } from './commands/contributors.js';
+import { askCommand } from './commands/ask.js';
 
 const program = new Command();
 
@@ -42,9 +43,7 @@ program
 program
   .command('ask <question>')
   .description('Ask a question about repository history')
-  .action((question: string) => {
-    console.log(`Ask command - not yet implemented. Question: ${question}`);
-  });
+  .action(askCommand);
 
 program
   .command('changelog')

@@ -99,19 +99,19 @@ Work through these tasks in order. Check off each task as you complete it. Commi
 
 ## Phase 5: Contributors Command
 
-- [ ] **5.1 Implement contributors command** (`src/commands/contributors.ts`)
+- [x] **5.1 Implement contributors command** (`src/commands/contributors.ts`)
   - Accept flags: --weeks, --months (default 4 weeks)
   - Fetch commits and PRs
   - Group by author
   - Calculate stats per contributor
 
-- [ ] **5.2 Add AI analysis**
+- [x] **5.2 Add AI analysis**
   - Create prompt asking for contributor focus areas
   - Include file paths in context
   - Stream response
   - Format output with contributor sections
 
-- [ ] **5.3 Register and test**
+- [x] **5.3 Register and test**
   - Add command to CLI
   - Test output formatting
 
