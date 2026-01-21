@@ -135,22 +135,22 @@ Work through these tasks in order. Check off each task as you complete it. Commi
 
 ## Phase 7: Changelog Command
 
-- [ ] **7.1 Implement changelog command** (`src/commands/changelog.ts`)
+- [x] **7.1 Implement changelog command** (`src/commands/changelog.ts`)
   - Accept --from and --to refs (required and optional)
   - Use GitHub compare API or commit listing between refs
   - Fetch associated PRs
 
-- [ ] **7.2 Add AI changelog generation**
+- [x] **7.2 Add AI changelog generation**
   - Create prompt for changelog format
   - Group by: Breaking Changes, Features, Fixes, Internal
   - Use imperative mood
   - Include PR numbers
 
-- [ ] **7.3 Add format flag**
+- [x] **7.3 Add format flag**
   - Support --format: pretty (default), markdown
   - Markdown format for copy/paste into CHANGELOG.md
 
-- [ ] **7.4 Register and test**
+- [x] **7.4 Register and test**
   - Add command to CLI
   - Test between tags
   - Test markdown output
