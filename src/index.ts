@@ -1,5 +1,6 @@
 import { Command } from 'commander';
 import { authCommand } from './commands/auth.js';
+import { configCommand } from './commands/config.js';
 
 const program = new Command();
 
@@ -19,9 +20,7 @@ program
   .option('--anthropic-key <key>', 'Store Anthropic API key')
   .option('--show', 'Display current configuration')
   .option('--clear', 'Clear all stored configuration')
-  .action(() => {
-    console.log('Config command - not yet implemented');
-  });
+  .action(configCommand);
 
 program
   .command('summary')
