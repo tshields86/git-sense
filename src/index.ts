@@ -1,4 +1,5 @@
 import { Command } from 'commander';
+import { authCommand } from './commands/auth.js';
 
 const program = new Command();
 
@@ -10,9 +11,7 @@ program
 program
   .command('auth')
   .description('Authenticate with GitHub using OAuth')
-  .action(() => {
-    console.log('Auth command - not yet implemented');
-  });
+  .action(authCommand);
 
 program
   .command('config')

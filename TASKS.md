@@ -4,14 +4,14 @@ Work through these tasks in order. Check off each task as you complete it. Commi
 
 ## Phase 1: Project Setup
 
-- [ ] **1.1 Initialize project**
+- [x] **1.1 Initialize project**
   - Create package.json with name "git-sense", type "module"
   - Add dependencies: commander, @octokit/rest, @anthropic-ai/sdk, chalk, ora, conf
   - Add dev dependencies: typescript, tsup, tsx, @types/node
   - Create tsconfig.json with strict mode, ES2022 target, NodeNext module
   - Create tsup.config.ts for CLI bundling
 
-- [ ] **1.2 Create project structure**
+- [x] **1.2 Create project structure**
   - Create folder structure: src/, src/commands/, src/lib/, src/types/
   - Create src/index.ts with basic Commander setup and placeholder commands
   - Add bin field to package.json pointing to dist/index.js
@@ -19,33 +19,33 @@ Work through these tasks in order. Check off each task as you complete it. Commi
 
 ## Phase 2: Core Infrastructure
 
-- [ ] **2.1 Config module** (`src/lib/config.ts`)
+- [x] **2.1 Config module** (`src/lib/config.ts`)
   - Use `conf` package to store/retrieve tokens
   - Functions: getGitHubToken, setGitHubToken, getAnthropicKey, setAnthropicKey
   - Support reading ANTHROPIC_API_KEY from environment variable as fallback
   - Add a function to check if authenticated
   - Add ensureAnthropicKey() that prompts interactively if key is missing
 
-- [ ] **2.2 Git utilities** (`src/lib/git.ts`)
+- [x] **2.2 Git utilities** (`src/lib/git.ts`)
   - Function to detect if current directory is a git repo
   - Function to parse GitHub remote URL (handle both HTTPS and SSH formats)
   - Extract owner and repo name from remote
   - Get current branch name
 
-- [ ] **2.3 GitHub client** (`src/lib/github.ts`)
+- [x] **2.3 GitHub client** (`src/lib/github.ts`)
   - Initialize Octokit with stored token
   - Function to fetch commits (with date range filtering, pagination)
   - Function to fetch merged PRs (with date range filtering, pagination)
   - Function to get authenticated user info
   - Handle rate limiting gracefully
 
-- [ ] **2.4 AI module** (`src/lib/ai.ts`)
+- [x] **2.4 AI module** (`src/lib/ai.ts`)
   - Initialize Anthropic client
   - Function to stream a completion to stdout
   - Helper to format git data into context for prompts
   - Use claude-sonnet-4-20250514 model
 
-- [ ] **2.5 Format utilities** (`src/lib/format.ts`)
+- [x] **2.5 Format utilities** (`src/lib/format.ts`)
   - Helper functions for consistent terminal output
   - Success, error, info, warning message formatters
   - Section headers
