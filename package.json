@@ -5,7 +5,7 @@
   "description": "AI-powered CLI tool to make sense of git history",
   "main": "dist/index.js",
   "bin": {
-    "git-sense": "./dist/index.js"
+    "git-sense": "dist/index.js"
   },
   "files": [
     "dist"
@@ -30,7 +30,7 @@
   "author": "tshields86",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tshields86/git-sense.git"
+    "url": "git+https://github.com/tshields86/git-sense.git"
   },
   "homepage": "https://github.com/tshields86/git-sense#readme",
   "bugs": {
