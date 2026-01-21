@@ -80,19 +80,19 @@ Work through these tasks in order. Check off each task as you complete it. Commi
 
 ## Phase 4: Summary Command
 
-- [ ] **4.1 Implement summary command** (`src/commands/summary.ts`)
+- [x] **4.1 Implement summary command** (`src/commands/summary.ts`)
   - Accept flags: --weeks, --months, --all
   - Detect repo from current directory
   - Fetch commits and PRs for time period
   - Show loading spinner during fetch
 
-- [ ] **4.2 Add AI summarization**
+- [x] **4.2 Add AI summarization**
   - Create prompt that asks for narrative summary
   - Include guidance: identify themes, group related work, mention contributors
   - Stream response to terminal
   - Format output nicely
 
-- [ ] **4.3 Register and test**
+- [x] **4.3 Register and test**
   - Add command to CLI
   - Test with different time ranges
   - Test with various repos

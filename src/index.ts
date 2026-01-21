@@ -2,6 +2,7 @@ import { Command } from 'commander';
 import { authCommand } from './commands/auth.js';
 import { configCommand } from './commands/config.js';
 import { summaryCommand } from './commands/summary.js';
+import { contributorsCommand } from './commands/contributors.js';
 
 const program = new Command();
 
@@ -36,9 +37,7 @@ program
   .description('Analyze contributor activity and focus areas')
   .option('--weeks <n>', 'Last n weeks', '4')
   .option('--months <n>', 'Last n months')
-  .action(() => {
-    console.log('Contributors command - not yet implemented');
-  });
+  .action(contributorsCommand);
 
 program
   .command('ask <question>')
