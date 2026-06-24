@@ -1,0 +1,37 @@
+name: Publish to npm
+
+# Publishes git-sense to npm whenever a GitHub Release is published.
+# Uses npm Trusted Publishing (OIDC) — no NPM_TOKEN secret required.
+# GitHub authenticates to npm directly via the id-token permission below.
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write # required for npm Trusted Publishing (OIDC)
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: 'https://registry.npmjs.org'
+
+      # Trusted Publishing requires npm >= 11.5.1; upgrade past the bundled version.
+      - name: Upgrade npm
+        run: npm install -g npm@latest
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      # No NODE_AUTH_TOKEN needed — OIDC handles auth, and provenance is automatic.
+      - name: Publish
+        run: npm publish
