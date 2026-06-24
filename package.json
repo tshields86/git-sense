@@ -28,6 +28,7 @@
     "github"
   ],
   "author": "tshields86",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tshields86/git-sense.git"
